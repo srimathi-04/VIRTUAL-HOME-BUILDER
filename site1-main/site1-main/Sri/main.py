@@ -28,11 +28,11 @@ def process_image_to_obj(image_path):
         for i, line in enumerate(lines):
             x1, y1, x2, y2 = line[0]
             
-            # Assuming the floorplan is in 2D, we convert to 3D by giving height (z-coordinate)
-            vertices.append((x1, y1, 0))  # First point (bottom of the wall)
-            vertices.append((x2, y2, 0))  # Second point (bottom of the wall)
-            vertices.append((x1, y1, 100))  # First point (top of the wall)
-            vertices.append((x2, y2, 100))  # Second point (top of the wall)
+            # Rotate 90 degrees along X-axis (negating the Y-coordinates)
+            vertices.append((x1, 0, y1))    # First point (was bottom of the wall, now rotated)
+            vertices.append((x2, 0, y2))    # Second point (was bottom of the wall, now rotated)
+            vertices.append((x1, 100, y1))  # First point (was top of the wall, now rotated)
+            vertices.append((x2, 100, y2))  # Second point (was top of the wall, now rotated)
 
             # Create faces for the wall using the 4 vertices (two triangles)
             faces.append((4 * i + 1, 4 * i + 2, 4 * i + 3))  # Triangle 1
@@ -69,3 +69,16 @@ if uploaded_file is not None:
         st.download_button("Download 3D Model (.obj)", f, file_name="floorplan.obj")
     
     st.success("3D model generation complete!")
+
+
+
+
+
+
+
+
+
+
+
+
+#streamlit run main.py
