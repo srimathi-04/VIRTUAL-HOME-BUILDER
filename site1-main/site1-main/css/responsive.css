@@ -1,0 +1,450 @@
+/** 
+ *
+ * ---------------------------------------------------------------------------
+ *
+ * Template Name: oXe - Dark Personal Portfolio Template.
+ * Template URL:  http://lovesome.biz/oxe
+ * Author : urosd
+ * Version : 1.0
+ *
+ * --------------------------------------------------------------------------- 
+ */
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .main-menu ul li {
+        padding: 20px 5px;
+    }
+    .about-info {
+        padding: 30px 0 0;
+    }
+    .service::before {
+        width: 67%;
+    }
+    .subscribe-form button.oxe-btn {
+        padding: 10px;
+        font-size: 13px;
+    }
+    #scrollUp {
+        bottom: 105px;
+    }
+}
+
+/*		Tablet Layout: 768px.
+-----------------------------------------------------------------   */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    body {
+        font-size: 13px;
+    }
+    /* menu start */
+    .navbar-header {
+        float: none !important;
+    }
+    nav.navbar {
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 5px;
+        width: 100%;
+    }
+    .navbar-toggle {
+        display: block;
+        margin-right: 0;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    ul.navbar-nav {
+        border: 0 none;
+        text-align: left;
+        width: 100%;
+        background-color: #fff;
+    }
+    .navbar-nav li {
+        display: block !important;
+        float: none;
+        padding: 0 !important;
+    }
+    ul.navbar-nav li a {
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+        padding-left: 20px !important;
+        display: block;
+        color: #000 !important;
+        font-weight: 600;
+    }
+    .main-menu ul.nav li a::before {
+        display: none;
+    }
+    .navbar-default .navbar-nav > .active > a,
+    .navbar-default .navbar-nav > .active > a:focus,
+    .navbar-default .navbar-nav > .active > a:hover {
+        background-color: #2B2B2B !important;
+        color: #fff !important;
+    }
+    .navbar-default .navbar-nav > li > a:hover {
+        background-color: #2B2B2B;
+        color: #fff !important;
+    }
+    .navbar-default .navbar-nav > li > a:focus {
+        background-color: #fff !important;
+        color: #000 !important;
+    }
+    .navbar-default .navbar-toggle .icon-bar {
+        background-color: #fff;
+    }
+    .navbar-default .navbar-toggle {
+        background-color: #2B2B2B !important;
+        border-color: #fff;
+        border: 0;
+    }
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+    .navbar-left,
+    .navbar-right {
+        float: none !important;
+    }
+    .collapse.in {
+        display: block !important;
+    }
+    .navbar-brand {
+        padding: 11px 15px;
+    }
+    .navbar-fixed-bottom .navbar-collapse,
+    .navbar-fixed-top .navbar-collapse {
+        max-height: none;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+    }
+    /* menu start end */
+    .slider-table-cell h2 {
+        font-size: 45px;
+    }
+    .slider-table-cell p {
+        font-size: 20px;
+    }
+    .oxe-btn {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+    .section-title h2 {
+        font-size: 30px;
+    }
+    .about-img {
+        padding: 87px 0;
+    }
+    .about-img h2,
+    .service-info h3 {
+        font-size: 20px;
+    }
+    .about-img h3 {
+        font-size: 13px;
+    }
+    .service::before {
+        width: 79%;
+    }
+    .service {
+        margin-bottom: 50px;
+    }
+    .service_box2::before {
+        display: none;
+    }
+    .single-project {
+        width: 50%;
+    }
+    .iso-nav ul li {
+        font-size: 14px;
+        font-weight: 600;
+        padding: 5px;
+    }
+    .progress-circle {
+        margin-bottom: 50px;
+    }
+    .circle h3 {
+        font-size: 20px;
+    }
+    .team-member {
+        margin-bottom: 50px;
+    }
+    .client-comments-details p {
+        width: 80%;
+    }
+    .blog-slide div.owl-prev {
+        left: 0;
+        top: 0;
+    }
+    .blog-slide div.owl-next {
+        right: 0;
+        top: 0;
+    }
+    .contact-info-content {
+        margin-top: 50px;
+    }
+    .contact-form::before {
+        display: none;
+    }
+    .subscribe-form button.oxe-btn {
+        font-size: 12px;
+    }
+    .copy-right-text {
+        letter-spacing: 2.5px;
+    }
+    #scrollUp {
+        bottom: 105px;
+    }
+    .page-title .title h2 {
+        margin-bottom: 0;
+        font-size: 26px;
+    }
+    .single-blog-post a h2,
+    .blog-comment-wraper h3 {
+        font-size: 18px;
+    }
+    blockquote p,
+    .single-widget h3 {
+        font-size: 16px;
+    }
+    .reply-commnet-content {
+        padding-left: 70px;
+    }
+    .comment-content span,
+    .recent-post-info h4 {
+        font-size: 14px;
+    }
+    .recent-post-info {
+        padding-left: 10px;
+        padding-top: 0;
+    }
+    
+    .ex-mar{
+        padding: 0;
+    }
+}
+
+/*		Mobile Layout: 320px.
+------------------------------------------------------------   */
+
+@media only screen and (max-width: 767px) {
+    body {
+        font-size: 12px;
+    }
+    .logo h2 {
+        font-size: 40px;
+    }
+    /* menu start */
+    .navbar-header {
+        float: none !important;
+    }
+    nav.navbar {
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 5px;
+        width: 100%;
+    }
+    .navbar-toggle {
+        display: block;
+        margin-right: 15px;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    ul.navbar-nav {
+        border: 0 none;
+        text-align: left;
+        width: 100%;
+        background-color: #fff;
+    }
+    .navbar-nav li {
+        display: block !important;
+        float: none;
+        padding: 0 !important;
+    }
+    ul.navbar-nav li a {
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+        padding-left: 20px !important;
+        display: block;
+        color: #000 !important;
+        font-weight: 600;
+    }
+    .main-menu ul.nav li a::before {
+        display: none;
+    }
+    .navbar-default .navbar-nav > .active > a,
+    .navbar-default .navbar-nav > .active > a:focus,
+    .navbar-default .navbar-nav > .active > a:hover {
+        background-color: #2B2B2B !important;
+        color: #fff !important;
+    }
+    .navbar-default .navbar-nav > li > a:hover {
+        background-color: #2B2B2B;
+        color: #fff !important;
+    }
+    .navbar-default .navbar-nav > li > a:focus {
+        background-color: #fff !important;
+        color: #000 !important;
+    }
+    .navbar-default .navbar-toggle .icon-bar {
+        background-color: #fff;
+    }
+    .navbar-default .navbar-toggle {
+        background-color: #2B2B2B !important;
+        border-color: #fff;
+        border: 0;
+    }
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+    .navbar-left,
+    .navbar-right {
+        float: none !important;
+    }
+    .collapse.in {
+        display: block !important;
+    }
+    .navbar-brand {
+        padding: 11px 15px;
+    }
+    .navbar-fixed-bottom .navbar-collapse,
+    .navbar-fixed-top .navbar-collapse {
+        max-height: none;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+    }
+    /* menu start end */
+    .slider-table-cell h2 {
+        font-size: 36px;
+    }
+    .slider-table-cell p {
+        font-size: 18px;
+    }
+    .oxe-btn {
+        font-size: 14px;
+        padding: 5px 15px;
+    }
+    .section-title h2 {
+        font-size: 22px;
+    }
+    .about-img {
+        margin-bottom: 30px;
+    }
+    .person img {
+        width: 100%;
+    }
+    .about-img h2 {
+        font-size: 18px;
+    }
+    .about-img h3 {
+        font-size: 14px;
+    }
+    .service::before {
+        display: none;
+    }
+    .service {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .service-info h3 {
+        font-size: 22px;
+    }
+    .iso-nav ul li {
+        width: 100%;
+    }
+    .iso-nav ul li::before {
+        display: none;
+    }
+    .single-project {
+        width: 100%;
+    }
+    .circle h3 {
+        font-size: 18px;
+    }
+    .progress-circle,
+    .team-member {
+        margin-bottom: 50px;
+    }
+    .client-comments-details p {
+        width: auto;
+    }
+    .blog-slide div.owl-prev {
+        left: 0;
+        top: 0;
+    }
+    .blog-slide div.owl-next {
+        right: 0;
+        top: 0;
+    }
+    .post-meta li {
+        font-size: 11px;
+    }
+    .contact-info-content {
+        margin-top: 50px;
+    }
+    .contact-info-content h2 {
+        font-size: 22px;
+    }
+    .copy-right-text {
+        padding: 10px 0 30px;
+        text-align: center;
+    }
+    #scrollUp {
+        bottom: 200px;
+    }
+    .oxe-btn {
+        font-size: 12px;
+    }
+    .subscribe-form input {
+        width: 72%;
+    }
+    .page-title .title h2 {
+        font-size: 22px;
+    }
+    .single-blog-post a h2 {
+        font-size: 16px;
+    }
+    .author-info a h3 {
+        font-size: 12px;
+    }
+    blockquote p {
+        font-size: 14px;
+    }
+    .blog-comment-wraper h3 {
+        font-size: 16px;
+    }
+    .comment-content span {
+        font-size: 12px;
+    }
+    .reply-commnet-content {
+        padding-left: 30px;
+    }
+    h3.comment-heading {
+        display: block;
+        font-size: 20px;
+        text-align: center;
+    }
+    .sidebar {
+        margin-top: 50px;
+    }
+    .comment-input-form {
+        padding-right: 0;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .comment-textarea textarea {
+        margin-top: 0;
+    }
+    .ex-mar{
+        padding: 0;
+    }
+}
+
+/*		Wide Mobile Layout: 480px.
+------------------------------------------------------------  */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .subscribe-form button.oxe-btn {
+        padding: 10px 33px !important;
+    }
+}

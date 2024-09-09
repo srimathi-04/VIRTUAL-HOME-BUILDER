@@ -1,0 +1,188 @@
+** {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background: url("../site1-main/img/BG.jpeg")
+    no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.form-box {
+  position: relative;
+  width: 400px;
+  height: 450px;
+  background: transparent;
+  border: 2px solid rgba(9, 1, 68, 0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:20px 0;
+}
+.form-value{
+  margin-top: 0px;
+}
+#login-button{
+  text-decoration: none;
+  color: navy;
+}
+
+#login-button:hover{
+  color: rgb(246, 236, 219);
+  background-color: navy;
+}
+#login-button{
+  color: navy;
+  border-style: solid;
+  border: 1px solid navy;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 16px;
+  background: transparent;
+}
+
+h2 {
+  font-size: 2em;
+  color: navy;
+  text-align: center;
+}
+
+.inputbox {
+  position: relative;
+  margin: 30px 0;
+  margin-top: 1%;
+  width: 310px;
+  border-bottom: 2px solid navy;
+}
+
+.inputbox label {
+  position: absolute;
+  top: 79%;
+  left: 5px;
+  transform: translateY(-5px);
+  color: navy;
+  font-size: 1em;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+input:focus ~ label {
+  top: -1px;
+}
+input:valid ~ label {
+  top: -1px;
+}
+
+.inputbox input {
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  padding: 0 35px 0 5px;
+  color: navy;
+}
+
+.inputbox ion-icon {
+  position: absolute;
+  right: 8px;
+  color: navy;
+  font-size: 1.2em;
+  top: 20px;
+}
+
+.forget {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0 15px;
+  font-size: 0.9em;
+  color: navy;
+}
+
+.forget label:nth-child(2) {
+  order: 1;
+}
+
+.forget label {
+  display: flex;
+  align-items: center;
+}
+
+.forget label input[type="checkbox"] {
+  margin-right: 6px;
+}
+
+.forget label a {
+  color: navy;
+  text-decoration: none;
+}
+
+.forget label a:hover {
+  text-decoration: underline;
+}
+
+button {
+  width: 100%;
+  height: 40px;
+  border-radius: 40px;
+  color: navy;
+  background: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.register {
+  font-size: 1em;
+  color: navy;
+  text-align: center;
+  margin: 25px 0 10px;
+}
+
+.register p a {
+  text-decoration: none;
+  color: navy;
+  font-weight: 600;
+}
+
+.register p a:hover {
+  text-decoration: underline;
+}
+
+.signup{
+  color: navy;
+  border-style: solid;
+  border: 2px solid navy;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 16px;
+  justify-content: center;
+  height: auto;
+  width: 1px;
+  padding: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-left: 70px;
+}
+.signup:hover{
+  color: rgb(246, 236, 219);
+  background-color: navy;
+}
+*{
+font-family: roboto;
+font-weight: 500;
+}
+

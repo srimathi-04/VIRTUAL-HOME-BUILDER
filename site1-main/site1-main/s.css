@@ -1,0 +1,125 @@
+* {
+  margin: 0px 2px;
+  padding: 11px 110px;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: navy;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  border: navy;
+  outline: navy;
+  scroll-behavior: smooth;
+  font-weight: 500;
+ 
+  
+}
+
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#login {
+  width: 60%;
+  height: 100%;
+  background: transparent;
+  border-radius: 15px;
+  padding: 28px 50px;
+  text-align: center;
+  padding-left: 0;
+  padding-right: 0;
+  box-sizing: content-box;
+  box-shadow: 2px 2px 8px navy;
+}
+
+h2{
+  display: block;
+  padding: 0%;
+  font-weight: bolder;
+  padding-bottom: 40px;
+}
+
+input{
+  width: auto;
+  background-color: transparent;
+  color: navy;
+}
+
+p {
+  padding: 10px;
+  text-align: left;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  position: static;
+}
+
+input[type=text], input[type=password],input[type=email] {
+  width: 90%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 18px;
+  outline: none;
+  border-radius: 25px;
+  border: 1px solid navy;
+}
+
+
+
+input[type=text]:focus, input[type=password]:focus,input[type=email]:focus {
+  border: 1px solid navy;
+}
+
+#signup-button:hover{
+  color: rgb(246, 236, 219);
+  background-color: navy;
+}
+#login1:hover{
+  color: rgb(246, 236, 219);
+  background-color: navy;
+}
+
+*{
+  font-family: roboto;
+  font-weight: 500;
+}
+#signup-button {
+  color: navy;
+  background: transparent;
+  border-style: solid;
+  border: 1px solid navy;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 16px;
+}
+#login1{
+  color: navy;
+  border-style: solid;
+  border: 1px solid navy;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.background{
+  position: relative;
+  width: 300px;
+  height: 450px;
+  background: transparent;
+  border: 2px solid rgba(9, 1, 68, 0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:20px 0;
+}
+
+.section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+
+}
