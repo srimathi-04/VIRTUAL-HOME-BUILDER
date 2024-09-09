@@ -23,20 +23,39 @@ def process_image_to_obj(image_path):
     vertices = []
     faces = []
     
+    # Variables to define the floor boundary
+    min_x, min_z = float('inf'), float('inf')
+    max_x, max_z = float('-inf'), float('-inf')
+    
     if lines is not None:
         # Create vertices based on line coordinates
         for i, line in enumerate(lines):
             x1, y1, x2, y2 = line[0]
             
-            # Rotate 90 degrees along X-axis (negating the Y-coordinates)
+            # Rotate 90 degrees along the X-axis (swap and negate Y and Z)
             vertices.append((x1, 0, y1))    # First point (was bottom of the wall, now rotated)
             vertices.append((x2, 0, y2))    # Second point (was bottom of the wall, now rotated)
             vertices.append((x1, 100, y1))  # First point (was top of the wall, now rotated)
             vertices.append((x2, 100, y2))  # Second point (was top of the wall, now rotated)
 
+            # Track boundary for floor
+            min_x, max_x = min(min_x, x1, x2), max(max_x, x1, x2)
+            min_z, max_z = min(min_z, y1, y2), max(max_z, y1, y2)
+
             # Create faces for the wall using the 4 vertices (two triangles)
             faces.append((4 * i + 1, 4 * i + 2, 4 * i + 3))  # Triangle 1
             faces.append((4 * i + 2, 4 * i + 3, 4 * i + 4))  # Triangle 2
+
+    # Add vertices for the floor
+    floor_vertices_start = len(vertices) + 1
+    vertices.append((min_x, 0, min_z))  # Bottom-left corner
+    vertices.append((max_x, 0, min_z))  # Bottom-right corner
+    vertices.append((max_x, 0, max_z))  # Top-right corner
+    vertices.append((min_x, 0, max_z))  # Top-left corner
+
+    # Add faces for the floor (two triangles)
+    faces.append((floor_vertices_start, floor_vertices_start + 1, floor_vertices_start + 2))  # Triangle 1
+    faces.append((floor_vertices_start, floor_vertices_start + 2, floor_vertices_start + 3))  # Triangle 2
 
     # Write vertices and faces to the OBJ file
     with open(obj_file, 'w') as f:
@@ -69,7 +88,6 @@ if uploaded_file is not None:
         st.download_button("Download 3D Model (.obj)", f, file_name="floorplan.obj")
     
     st.success("3D model generation complete!")
-
 
 
 
