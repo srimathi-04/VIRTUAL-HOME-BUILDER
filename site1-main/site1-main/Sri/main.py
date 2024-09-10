@@ -6,8 +6,8 @@ import os
 # Title of the app
 st.title('Floorplan to 3D Model with Wall Thickness')
 
-# Function to detect walls/lines and convert to 3D .obj file with thickness
-def process_image_to_obj(image_path, wall_thickness=10):
+# Function to detect walls/lines and convert to 3D .glb file with thickness
+def process_image_to_glb(image_path, wall_thickness=10):
     # Load the image in grayscale
     img = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
     
@@ -17,8 +17,8 @@ def process_image_to_obj(image_path, wall_thickness=10):
     # Use HoughLines to detect straight lines (potential walls)
     lines = cv2.HoughLinesP(edges, 1, np.pi / 180, threshold=100, minLineLength=50, maxLineGap=10)
 
-    # Prepare to write OBJ file
-    obj_file = 'output_with_thickness.obj'
+    # Prepare to write glb file
+    glb_file = 'output_with_thickness.glb'
     
     vertices = []
     faces = []
@@ -74,14 +74,14 @@ def process_image_to_obj(image_path, wall_thickness=10):
     faces.append((floor_vertices_start, floor_vertices_start + 1, floor_vertices_start + 2))  # Triangle 1
     faces.append((floor_vertices_start, floor_vertices_start + 2, floor_vertices_start + 3))  # Triangle 2
 
-    # Write vertices and faces to the OBJ file
-    with open(obj_file, 'w') as f:
+    # Write vertices and faces to the glb file
+    with open(glb_file, 'w') as f:
         for v in vertices:
             f.write(f"v {v[0]} {v[1]} {v[2]}\n")
         for face in faces:
             f.write(f"f {face[0]} {face[1]} {face[2]}\n")
 
-    return obj_file
+    return glb_file
 
 # Upload floorplan image
 uploaded_file = st.file_uploader("Upload a floorplan image", type=["png", "jpg", "jpeg"])
@@ -97,11 +97,11 @@ if uploaded_file is not None:
     
     st.write("Processing...")
     
-    # Process the image and convert to OBJ
-    obj_file = process_image_to_obj(image_path)
+    # Process the image and convert to glb
+    glb_file = process_image_to_glb(image_path)
     
-    # Provide download link for the generated OBJ file
-    with open(obj_file, 'rb') as f:
-        st.download_button("Download 3D Model (.obj)", f, file_name="floorplan_with_thickness.obj")
+    # Provide download link for the generated glb file
+    with open(glb_file, 'rb') as f:
+        st.download_button("Download 3D Model (.glb)", f, file_name="floorplan_with_thickness.glb")
     
     st.success("3D model generation complete!")
