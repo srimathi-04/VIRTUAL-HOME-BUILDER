@@ -17,7 +17,7 @@ function handleUpload() {
     const formData = new FormData();
     formData.append("file", selectedFile);
 
-    fetch("http://localhost:4000/api/upload", {
+    fetch("http://localhost:5500/api/upload", {
         method: "POST",
         headers: {
             'Authorization': `Bearer ${localStorage.getItem('token')}` // Include token if needed for authentication
@@ -31,7 +31,7 @@ function handleUpload() {
 
             // Display the uploaded image
             const img = document.createElement('img');
-            img.src = `http://localhost:4000/uploads/${data.file.filename}`;
+            img.src = `http://localhost:5500/uploads/${data.file.filename}`;
             img.alt = 'Uploaded Image';
             img.style.maxWidth = '100%';
             document.getElementById('result').innerHTML = ''; // Clear previous content

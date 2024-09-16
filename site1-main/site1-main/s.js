@@ -1,34 +1,24 @@
-document.getElementById('signup-form').addEventListener('submit', async function(event) {
-  event.preventDefault();
+document.getElementById("signupForm").addEventListener("submit", function(event) {
+    event.preventDefault();
 
-  const name = document.getElementById('username').value;
-  const email = document.getElementById('email').value;
-  const password = document.getElementById('pswd').value;
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("pswd").value;
+    const email = document.getElementById("email").value;
+    
+    // Debugging: Check if values are correctly retrieved
+    console.log(username, password, email);
 
-  if (!name || !email || !password) {
-      alert('All fields are required.');
-      return;
-  }
+    // Ensure the 'message' element exists
+    const messageElement = document.getElementById("message");
 
-  try {
-      const response = await fetch('http://localhost:4000/api/register', {
-          method: 'POST',
-          headers: {
-              'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({ name, email, password }),
-      });
-
-      const data = await response.json();
-
-      if (!response.ok) {
-          throw new Error(data.error || 'An unknown error occurred');
-      }
-
-      alert(data.message || 'Registration successful!');
-      window.location.href = 'fileupload.html';
-  } catch (error) {
-      console.error('Error:', error);
-      alert(`An error occurred: ${error.message}`);
-  }
+    if (username && password && email) {
+        localStorage.setItem("username", username);
+        localStorage.setItem("pswd", password);
+        localStorage.setItem("email", email);
+        messageElement.textContent = "Signup successful!";
+    } else {
+        messageElement.textContent = "Please fill in all fields.";
+    }
 });
+const messageElement = document.getElementById("message");
+console.log(messageElement);
