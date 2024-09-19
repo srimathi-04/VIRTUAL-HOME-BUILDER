@@ -1,28 +1,21 @@
-document.getElementById('login-form').addEventListener('submit', async (event) => {
+document.getElementById("login-form").addEventListener("submit", function(event) {
   event.preventDefault();
 
-  const email = document.getElementById('email').value;
-  const password = document.getElementById('password').value;
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
 
-  try {
-    const response = await fetch('http://localhost:5500/api/login', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ email, password }),
-    });
+  // Check if user credentials are stored in localStorage
+  const storedEmail = localStorage.getItem("email");
+  const storedPassword = localStorage.getItem("password");
 
-    const data = await response.json();
+  const messageElement = document.getElementById("message");
 
-    if (data.status === 'ok') {
-      localStorage.setItem('token', data.token); // Save token to local storage
-      window.location.href = 'fileupload.html'; // Redirect to file upload page
-    } else {
-      alert(data.error || 'Invalid credentials. Please try again.');
-    }
-  } catch (error) {
-    console.error('Error:', error);
-    document.getElementById('error-message').textContent = 'An error occurred. Please try again.';
+  // Basic validation
+  if (email === storedEmail && password === storedPassword) {
+      messageElement.textContent = "Login successful!";
+      // Redirect or perform additional actions here
+      window.location.href = "welcome.html"; // Example redirect
+  } else {
+      messageElement.textContent = "Invalid email or password.";
   }
 });

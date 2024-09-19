@@ -34,6 +34,7 @@ section {
 }
 #login-button{
   text-decoration: none;
+  text-align: center;
   color: navy;
 }
 
@@ -185,4 +186,7 @@ button {
 font-family: roboto;
 font-weight: 500;
 }
-
+a#login-button{
+  padding: 10px;
+  margin-left: 100px;
+}
